@@ -6,6 +6,7 @@ public class ToggleEnvironment : MonoBehaviour
 {
     public GameObject Postprocess;
     public GameObject Camera2;
+    public GameObject plane;
 
     // Update is called once per frame
     void Update()
@@ -31,6 +32,18 @@ public class ToggleEnvironment : MonoBehaviour
             else
             {
                 Postprocess.SetActive(true);
+            }
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            if (plane.layer == 0)
+            {
+                plane.layer = 6;
+            }
+            else
+            {
+                plane.layer = 0;
             }
         }
     }
